@@ -1,4 +1,4 @@
-namespace FootBallStandings
+namespace FootBallStandings.Classes
 {
     public class Team
     {

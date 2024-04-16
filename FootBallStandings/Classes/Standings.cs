@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FootBallStandings
+namespace FootBallStandings.Classes
 {
     public class Standings
     {

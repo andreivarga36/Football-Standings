@@ -1,6 +1,7 @@
-﻿using Xunit;
+﻿using FootBallStandings.Classes;
+using Xunit;
 
-namespace FootBallStandings
+namespace FootBallStandingsFacts.Classes
 {
     public class StandingsFacts
     {
@@ -8,8 +9,8 @@ namespace FootBallStandings
         public void AddTeam_AddOneTeam_ShouldReturnTeamName()
         {
 
-            Team interMilan = new ("interMilan", 20);
-            Standings standings = new ();
+            Team interMilan = new("interMilan", 20);
+            Standings standings = new();
             standings.AddTeam(interMilan);
 
             Assert.Equal(interMilan, standings.TeamAt(1));
@@ -18,11 +19,11 @@ namespace FootBallStandings
         [Fact]
         public void AddTeam_RomaIsOn3RdPlace_ShouldReturnCorrectTeam()
         {
-            Team inter = new ("inter", 15);
-            Team milan = new ("milan", 14);
-            Team roma = new ("roma", 13);
+            Team inter = new("inter", 15);
+            Team milan = new("milan", 14);
+            Team roma = new("roma", 13);
 
-            Standings standingsList = new ();
+            Standings standingsList = new();
             standingsList.AddTeam(inter);
             standingsList.AddTeam(milan);
             standingsList.AddTeam(roma);
@@ -33,11 +34,11 @@ namespace FootBallStandings
         [Fact]
         public void TeamAt_JuventusIsOn3RdPlace_ShouldReturnCorrectTeam()
         {
-            Team juventus = new ("juventus", 15);
-            Team milan = new ("milan", 18);
-            Team roma = new ("roma", 20);
+            Team juventus = new("juventus", 15);
+            Team milan = new("milan", 18);
+            Team roma = new("roma", 20);
 
-            Standings standings = new ();
+            Standings standings = new();
             standings.AddTeam(juventus);
             standings.AddTeam(milan);
             standings.AddTeam(roma);
@@ -48,13 +49,13 @@ namespace FootBallStandings
         [Fact]
         public void TeamAt_TottenhamIsOn5ThPlace_ShouldReturnCorrectTeam()
         {
-            Team chelsea = new ("chelsea", 22);
-            Team arsenal = new ("arsenal", 25);
-            Team liverpool = new ("liverpool", 20);
-            Team tottenham = new ("tottenham", 18);
-            Team leicester = new ("leicester", 21);
-             
-            Standings standings = new ();
+            Team chelsea = new("chelsea", 22);
+            Team arsenal = new("arsenal", 25);
+            Team liverpool = new("liverpool", 20);
+            Team tottenham = new("tottenham", 18);
+            Team leicester = new("leicester", 21);
+
+            Standings standings = new();
             standings.AddTeam(chelsea);
             standings.AddTeam(arsenal);
             standings.AddTeam(liverpool);
@@ -67,11 +68,11 @@ namespace FootBallStandings
         [Fact]
         public void TeamPosition_VillarealIsOn2NdPlace_ShouldReturnTeamPosition()
         {
-            Team realMadrid = new ("realMadrid", 10);
-            Team valencia = new ("valencia", 15);
-            Team villareal = new ("villareal", 11);
+            Team realMadrid = new("realMadrid", 10);
+            Team valencia = new("valencia", 15);
+            Team villareal = new("villareal", 11);
 
-            Standings standings = new ();
+            Standings standings = new();
             standings.AddTeam(realMadrid);
             standings.AddTeam(valencia);
             standings.AddTeam(villareal);
@@ -82,13 +83,13 @@ namespace FootBallStandings
         [Fact]
         public void TeamPosition_ATeamIsOnLastPlace_ShouldReturnTeamPosition()
         {
-            Team bayern = new ("bayern", 10);
-            Team leverkuzen = new ("leverkuzen", 10);
-            Team dortmund = new ("dortmund", 10);
-            Team frankfurt = new ("frankfurt", 10);
-            Team hertha = new ("hertha", 10);
+            Team bayern = new("bayern", 10);
+            Team leverkuzen = new("leverkuzen", 10);
+            Team dortmund = new("dortmund", 10);
+            Team frankfurt = new("frankfurt", 10);
+            Team hertha = new("hertha", 10);
 
-            Standings standings = new ();
+            Standings standings = new();
             standings.AddTeam(bayern);
             standings.AddTeam(leverkuzen);
             standings.AddTeam(dortmund);
@@ -132,9 +133,9 @@ namespace FootBallStandings
         [Fact]
         public void SortStandings_BayernIsOnLastPlace_ShouldReturnCorrectPosition()
         {
-            Team bayern = new ("bayern", 12);
-            Team frankfurt = new ("frankfurt", 16);
-            Team dortmund = new ("dortmund", 13);
+            Team bayern = new("bayern", 12);
+            Team frankfurt = new("frankfurt", 16);
+            Team dortmund = new("dortmund", 13);
 
             Standings standings = new();
             standings.AddTeam(bayern);
@@ -147,10 +148,10 @@ namespace FootBallStandings
         [Fact]
         public void UpdateStandings_InterWinAndAdvanceTo1StPlace_ShouldReturnCorrectPosition()
         {
-            Team inter = new ("inter", 18);
-            Team napoli = new ("napoli", 20);
+            Team inter = new("inter", 18);
+            Team napoli = new("napoli", 20);
 
-            Standings standings = new ();
+            Standings standings = new();
             standings.AddTeam(napoli);
             standings.AddTeam(inter);
 
@@ -164,12 +165,12 @@ namespace FootBallStandings
         [Fact]
         public void UpdateStandings_RapidLoseAndFallsOnePlaceInStandings_ShouldReturnCorrectPosition()
         {
-            Team cfr = new ("cfr", 33);
-            Team rapid = new ("rapid", 28);
-            Team steaua = new ("steaua", 27);
-            Team petrolul = new ("petrolul", 22);
+            Team cfr = new("cfr", 33);
+            Team rapid = new("rapid", 28);
+            Team steaua = new("steaua", 27);
+            Team petrolul = new("petrolul", 22);
 
-            Standings standings = new ();
+            Standings standings = new();
             standings.AddTeam(cfr);
             standings.AddTeam(rapid);
             standings.AddTeam(steaua);
@@ -185,10 +186,10 @@ namespace FootBallStandings
         [Fact]
         public void UpdateStandings_LiverpoolDrawAgainsArsenalAndKeepsHisPlace_ShouldReturnTeamPosition()
         {
-            Team arsenal = new ("arsenal", 17);
-            Team liverpool = new ("liverpool", 20);
+            Team arsenal = new("arsenal", 17);
+            Team liverpool = new("liverpool", 20);
 
-            Standings standings = new ();
+            Standings standings = new();
             standings.AddTeam(arsenal);
             standings.AddTeam(liverpool);
 

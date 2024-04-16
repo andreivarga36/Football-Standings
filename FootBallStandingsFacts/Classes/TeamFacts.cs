@@ -1,6 +1,7 @@
+using FootBallStandings.Classes;
 using Xunit;
 
-namespace FootBallStandings
+namespace FootBallStandingsFacts.Classes
 {
     public class TeamFacts
     {
@@ -58,8 +59,8 @@ namespace FootBallStandings
         {
             int draw = 1;
 
-            Team bayern = new ("bayern", 10);
-            Team dortmund = new ("dortmund", 10);
+            Team bayern = new("bayern", 10);
+            Team dortmund = new("dortmund", 10);
             bayern.AddPoints(draw);
             dortmund.AddPoints(draw);
 
@@ -75,7 +76,7 @@ namespace FootBallStandings
             Team arsenal = new("arsenal", 18);
             arsenal.AddPoints(win);
 
-            Assert.False (chelsea.HaveMorePointsThan(arsenal));
+            Assert.False(chelsea.HaveMorePointsThan(arsenal));
         }
 
         [Fact]
