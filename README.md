@@ -6,4 +6,4 @@
 
   ## Documentation
   
-  -[Sorting Algorithms: Bubble Sort](https://code-maze.com/csharp-bubble-sort/)
+  - [Sorting Algorithms: Bubble Sort](https://code-maze.com/csharp-bubble-sort/)
